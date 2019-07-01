@@ -9,3 +9,9 @@ Topic to cover.
    
    2. Python discussion once in a week.
    
+  
+  In app.py used following method to create login form
+   > (from flask import request) 
+
+  In app_2.py used following method to create login form
+   > (from flask_wtf import Form) 

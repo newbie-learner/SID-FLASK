@@ -1,5 +1,4 @@
-import json
-import models as db
+
 from flask import Flask, render_template, jsonify
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 
@@ -29,7 +28,7 @@ def creatrule():
         print(type(fmr1))
         db.insertMAPRule("%s"%dmr, "%s"%ipv6_fixlen, "%s"%name, "%s"%status,\
                          "%s"%version ,"%s"%code ,fmr="%s"%fmr1)
-    return render_template("login.html")
+    return render_template("Rule.html")
 
 @app.route("/query",methods=["GET"])
 def query(id=None):

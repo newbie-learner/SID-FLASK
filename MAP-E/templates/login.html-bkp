@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please login</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="DMR IPV6 address of BR" name="dmr" value="{{
+          request.form.dmr }}">
+         <input type="text" placeholder="ipv6_fixlen" name="ipv6_fixlen" value="{{
+          request.form.ipv6_fixlen }}">
+        <input type="text" placeholder="name" name="name" value="{{
+          request.form.name }}">
+         <input type="text" placeholder="status" name="status" value="{{
+          request.form.status }}">
+        <input type="text" placeholder="version" name="version" value="{{
+          request.form.version }}">
+         <input type="text" placeholder="manufacturer" name="code" value="{{
+          request.form.code }}">
+        <input type="text" placeholder="ipv4" name="ipv4" value="{{
+          request.form.ipv4 }}">
+         <input type="text" placeholder="eabits" name="eabit" value="{{
+          request.form.eabit }}">
+        <input type="text" placeholder="psid" name="psid" value="{{
+          request.form.psid }}">
+         <input type="text" placeholder="ipv6" name="ipv6" value="{{
+          request.form.ipv6 }}">
+        <input class="btn btn-default" type="submit" value="CreateRule">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
